@@ -1,0 +1,84 @@
+{% extends 'main.html' %}
+{% load static %}
+    {% block content %}
+    <!-- Shopping Cart Section Begin -->
+    <section class="shopping-cart spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="shopping__cart__table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for carts in cart %}
+                                <tr>
+                                    <td class="product__cart__item">
+                                        <div class="product__cart__item__pic">
+                                            <img width="90px" height="100px" style="vertical-align: middle;" src="{{carts.product.image.url}}" alt="">
+                                        </div>
+                                        <div class="product__cart__item__text">
+                                            <h6><b>{{carts.product.brand}}</b></h6>
+                                            <p style="font-weight: 600;">{{carts.product.description}}</p>
+                                            <h5>{{carts.product.correct_price}}<s style="color: gray; margin-left: 5px;">{{carts.product.wrong_price}}</s></h5>
+                                        </div>
+                                    </td>
+                                    <td class="quantity__item">
+                                        <div class="quantity">
+                                            <div class="pro-qty-2">
+                                                <a href="{{carts.DCartQuantity}}"><span class="fa fa-angle-left dec qtybtn"></span></a>
+                                                    <input type="text" value="{{carts.quantity}}">
+                                                <a href="{{carts.ICartQuantity}}"><span class="fa fa-angle-right inc qtybtn"></span></a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="cart__price">Rs.{{carts.price}}</td>
+                                    <td class="cart__close"><a href="{{carts.deleteCartQuantity}}"><i class="fa fa-close"></i></a></td>
+                                </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="continue__btn">
+                                <a href="{% url 'home' %}">Continue Shopping</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="continue__btn update__btn">
+                                <a href="{% url 'cart' %}"><i class="fa fa-spinner"></i> Update cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cart__discount">
+                        <h6>Discount codes</h6>
+                        <form action="#">
+                            <input type="text" placeholder="Coupon code">
+                            <button type="submit">Apply</button>
+                        </form>
+                    </div>
+                    <div class="cart__total">
+                        <h6>Cart total({{count}})</h6>
+                        <ul>
+                            {% for carts in cart %}
+                            <li>{{carts.product.brand}} <span style="color: black;">Rs.{{carts.product.correct_price}}</span></li>
+                            {% endfor %}
+                            <li>Total <span>Rs.{{Total}}</span></li>
+                        </ul>
+                        <a href="{% url 'checkout' %}" class="primary-btn">Proceed to checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shopping Cart Section End -->
+    {% endblock content %} 

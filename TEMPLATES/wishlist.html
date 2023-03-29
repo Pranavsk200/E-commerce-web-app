@@ -1,0 +1,82 @@
+<!--<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>-->
+<!------ Include the above in your HEAD tag ---------->
+{% extends 'main.html' %}
+{% load static %}
+	{% block content %}
+	<div class="col-lg-12">
+		<div class="shop__product__option">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="shop__product__option__left">
+						<p>Showing {{count}} results</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6">
+					<div class="shop__product__option__right">
+						<p>Sort by Price:</p>
+						<select>
+							<option value="">Low To High</option>
+							<option value="">High To Low</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			{% for wishlist in wishlists %}
+			<a>
+			<div class="col-lg-4 col-md-6 col-sm-6">
+				<div class="product__item">
+					<div class="product__item__pic set-bg" >
+						<img src="{{wishlist.product.image.url}}" alt="">
+						<ul class="product__hover">
+							<li><a href="#"><img src="{% static 'img/icon/heart.png' %}" alt=""></a></li>
+							<li><a href="#"><img src="{% static 'img/icon/compare.png' %}" alt=""> <span>Compare</span></a>
+							</li>
+							<li><a href="#"><img src="{% static 'img/icon/search.png' %}" alt=""></a></li>
+						</ul>
+					</div>
+					<div class="product__item__text">
+						<h6><b>{{wishlist.product.brand}}</b></h6>
+						<h6>{{wishlist.product.description}}</h6>
+						<a href="{{product.get_absolute_url}}" class="add-cart">+ Add To Cart</a>
+						<div class="rating">
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+							<i class="fa fa-star-o"></i>
+						</div>
+						<h5>{{wishlist.product.correct_price}} <s style="color: gray;">{{wishlist.product.wrong_price}}</s></h5>
+						<div class="product__color__select">
+							<label for="pc-4">
+								<input type="radio" id="pc-4">
+							</label>
+							<label class="active black" for="pc-5">
+								<input type="radio" id="pc-5">
+							</label>
+							<label class="grey" for="pc-6">
+								<input type="radio" id="pc-6">
+							</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			</a>
+			{% endfor %}
+		</div>
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="product__pagination">
+					<a class="active" href="#">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<span>...</span>
+					<a href="#">21</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% endblock content %} 
