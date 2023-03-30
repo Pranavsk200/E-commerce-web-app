@@ -59,11 +59,7 @@ If you'd like to support this project and all the other open source work on this
 
 ### Option 1: GitHub Sponsors
 
-Sponsor through GitHub Sponsors. On GitHub, [this repository](https://github.com/justdjango/django-ecommerce) shows a button where you can Sponsor the contributors.
+Sponsor through GitHub Sponsors. On GitHub, [this repository](https://github.com/Pranavsk200/E-commerce-web-app) shows a button where you can Sponsor the contributors.
 
-### Option 2: JustDjango
 
-If you're learning Django and want to take your next step to become a professional Django developer, consider signing up on [JustDjango](https://learn.justdjango.com).
-
----
 
