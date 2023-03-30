@@ -1,14 +1,12 @@
 # E-commerce-web-app
 real time E-commerce web applications using Django
 
-
-# Django E-commerce
-
 # Project demo
-•	Designed and Developed web application to uplift the street Vendors Community with the primary goal of increasing their sales
-•	Functionality that allows people to upload pictures of the businesses along with their name, description and location
-•	Implemented feature like Location filtering, Sorting with price, payment integration with PayPal through Debit and credit card
-•	Tech used- Django | Django REST framework | React.js | PostgreSQL | Heroku
+*	Designed and Developed web application to uplift the street Vendors Community with the primary goal of increasing their sales
+*	Functionality that allows people to upload pictures of the businesses along with their name, description and location
+*	Implemented feature like Location filtering, Sorting with price, payment integration with PayPal through Debit and credit card
+*	Tech used- Django | Django REST framework | React.js | PostgreSQL | Heroku
+  
 ---
 
 ## Quick demo
