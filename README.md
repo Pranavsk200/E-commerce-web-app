@@ -13,8 +13,7 @@ real time E-commerce web applications using Django
 
 ## Quick demo
 
-[![alt text](https://drive.google.com/file/d/1AVAnlsCuWduTAxxL3ROIKlu6um6wA8uS/view?usp=share_link "Logo")](https://youtu.be/z4USlooVXG0)
-
+![demo](https://drive.google.com/file/d/1AVAnlsCuWduTAxxL3ROIKlu6um6wA8uS/view?usp=share_link "Logo")
 ---
 
 
